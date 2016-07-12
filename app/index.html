@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="mmfiApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="header">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+
+          <button id="nav-toggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- <a class="navbar-left" href="#/"><img id="midway-seal" class="img-responsive" src="images/midway-seal.png"></a> -->
+          <img id="midway-seal" class="img-responsive" src="http://localhost:9000/images/midway-seal.png" usemap="#image-map">
+          <h1 id="brand">MIDWAY</h1>
+
+          <map name="image-map">
+              <area target="" alt="Home" title="Home" href="#/home" coords="138,323,138,143,213,143,246,237,283,143,357,143,357,326,312,325,307,216,268,325,227,325,186,212,184,325" shape="poly">
+              <area target="" alt="About" title="About" href="#/about" coords="250,51,280,55,315,67,344,81,366,101,390,121,408,151,424,181,430,211,431,233,361,236,359,141,279,136,250,217" shape="poly">
+              <area target="" alt="Academic" title="Academic" href="#/academic" coords="244,213,245,53,205,58,167,71,137,92,107,118,93,139,80,162,68,189,63,223,62,234,135,238,135,139,213,140" shape="poly">
+              <area target="" alt="Campus Life" title="Campus Life" href="#/campus" coords="134,241,61,240,64,280,76,308,92,339,113,363,140,389,163,401,194,415,220,422,246,424,246,332,220,335,190,236,191,331,135,331" shape="poly">
+              <area target="" alt="Social Management" title="Social Management" href="#/social" coords="251,422,248,332,273,325,306,230,307,327,361,328,363,242,435,242,426,290,411,328,385,362,358,389,321,409,286,420" shape="poly">
+          </map>
+        </div>
+
+        <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id="nav-link" class="active" href="#/">Home</a></li>
+            <li><a id="nav-link" ng-href="#/about">About</a></li>
+            <li><a id="nav-link" ng-href="#/academic">Academic</a></li>
+            <li><a id="nav-link" ng-href="#/campus">Campus Life</a></li>
+            <li><a id="nav-link" style="margin-right:15px;" ng-href="#/social">Social Management</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#mainCarousel" data-slide-to="1"></li>
+        <li data-target="#mainCarousel" data-slide-to="2"></li>
+        <li data-target="#mainCarousel" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Slide Images -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img class="img-responsive" id="slider-img" src="http://res.cloudinary.com/dar4cecpp/image/upload/v1451954675/cabo-san-lucas-81367_1920_xn14w9.jpg" alt="Add Image">
+          <!-- Slide Caption -->
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+        <div class="item">
+          <img class="img-responsive" id="slider-img" src="http://res.cloudinary.com/dar4cecpp/image/upload/v1455859365/UCK7RXVBMR_prwumv.jpg" alt="Add Image">
+          <!-- Slide Caption -->
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+        <div class="item">
+          <img class="img-responsive" id="slider-img" src="http://res.cloudinary.com/dar4cecpp/image/upload/v1455865458/4DA1218986_zbqhjb.jpg" alt="Add Image">
+          <!-- Slide Caption -->
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+        <div class="item">
+          <img class="img-responsive" id="slider-img" src="http://res.cloudinary.com/dar4cecpp/image/upload/v1455859365/UCK7RXVBMR_prwumv.jpg" alt="Add Image">
+          <!-- Slide Caption -->
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#mainCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#mainCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+
+    <div class="container-narrow">
+    <div ng-view=""></div>
+    </div>
+
+    <div class="footer">
+      <div class="container-narrow">
+        <div class="text-center center-block">
+          <h4>CONNECT WITH US</h4>
+          <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+          <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+          <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+          <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+        </div>
+        <hr>
+        <p class="text-center"><span class="fa fa-copyright"></span> <em>2016 MIDWAY IT DEPARTMENT ALL RIGHTS RESERVED</em></p>
+      </div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/image-map-resizer/js/imageMapResizer.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+
+    <script>
+      $(document).ready(function() {
+          $('map').imageMapResize();
+      });
+
+      $( function() {
+        $( document ).tooltip();
+      } );
+    </script>
+</body>
+</html>
