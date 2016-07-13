@@ -4,6 +4,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "font-awesome/scss/font-awesome.scss";
 @import "components-font-awesome/scss/font-awesome.scss";
 // endbower
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic);
 
 .browsehappy {
   margin: 0.2em 0;
@@ -12,36 +13,53 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
+@keyframes rotateSeal {
+  0% {-webkit-transform: rotateZ(0deg);transform: rotateZ(0deg);}
+  25% {-webkit-transform: rotateZ(45deg);transform: rotateZ(45deg);}
+  50% {-webkit-transform: rotateZ(90deg);transform: rotateZ(90deg);}
+  100% {-webkit-transform: rotateZ(135deg);transform: rotateZ(135deg);}
+}
+
 img#midway-seal {
   max-width: 150px;
   height: auto;
-  margin: 10px;
+  margin-left: 180px;
   z-index: 10;
   display: block;
   position: absolute;
+  animation-name: rotateSeal;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 h1#brand {
-  color: #CCC500;
+  color: #E5E5E5;
   position: absolute;
   display: block;
-  margin-left: 170px;
+  margin-left: 10px;
   font-size: 50px;
   font-weight: 800;
   text-transform: uppercase;
   padding-top: 20px;
-  padding-bottom: 40px; 
+  padding-bottom: 40px;
+  letter-spacing: -5px;
 }
 
 img#slider-img {
   min-width: 100%;
   max-height: 100vh;
+  top: 0;
 }
 
 button#nav-toggle {
   margin-top: 40px;
   margin-bottom: 40px;
   color: #fff;
+}
+
+.navbar-default {
+  background: rgba(0, 0, 0, 0.70);;
 }
 
 a#nav-link {
@@ -51,12 +69,16 @@ a#nav-link {
   font-style: normal;
   font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1x;
   padding-top: 50px;
-  padding-bottom: 40px; 
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px; 
 }
 
 div#mainCarousel {
+  margin-top: -50px;
+  padding-top: 0;
   min-width: 100%;
   max-height: 100vh;
 }
@@ -96,6 +118,7 @@ div#mainCarousel {
 
 body {
   padding: 0;
+  margin: 0;
   font-family: Lato;
 }
 
