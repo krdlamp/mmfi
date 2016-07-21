@@ -13,6 +13,20 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
+.sidebar {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.90);
+  position: fixed;
+  left: 0;
+  bottom: 200px;
+  margin: 0;
+  border: 1px solid #000;
+  padding: 5px;
+  -webkit-transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg);
+  z-index: 20;
+}
+
 @keyframes rotateSeal {
   0% {-webkit-transform: rotateZ(0deg);transform: rotateZ(0deg);}
   25% {-webkit-transform: rotateZ(45deg);transform: rotateZ(45deg);}
@@ -24,7 +38,7 @@ img#midway-seal {
   max-width: 150px;
   height: auto;
   margin-left: 180px;
-  z-index: 10;
+  z-index: 20;
   display: block;
   position: absolute;
   animation-name: rotateSeal;
@@ -58,8 +72,37 @@ button#nav-toggle {
   color: #fff;
 }
 
-.navbar-default {
-  background: rgba(0, 0, 0, 0.70);;
+.navbar-default, .dropdown-menu {
+  background: rgba(0, 0, 0, 0.70);
+}
+
+.event {
+  margin: 10px;
+}
+
+.event-card {
+  width: 110px;
+  height: 120px;
+  background: #00897B;
+  padding: 15px;
+}
+
+.no-padding {
+  padding: 0;
+  margin: 0;
+}
+
+.event-detail {
+  padding: 0;
+}
+
+
+.day {
+  color: #fff;
+}
+
+.month {
+  color: #B2DFDB;
 }
 
 a#nav-link {
@@ -202,3 +245,22 @@ body {
     border-bottom: 0;
   }
 }
+
+/* Full width bootstrap navbar dropdown menu */
+
+.nav > li.dropdown.open { 
+  position: static; 
+  z-index: 10;
+} 
+.nav > li.dropdown.open .dropdown-menu {
+  display:table;
+  width: 100%; 
+  text-align: 
+  center; 
+  left:0; 
+  right:0; 
+  z-index: 10;
+} 
+.dropdown-menu>li { 
+  display: table-cell; 
+}  

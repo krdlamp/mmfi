@@ -38,18 +38,29 @@
           
 
           <map name="image-map">
-              <area target="" alt="Home" title="Home" href="#/home" coords="138,323,138,143,213,143,246,237,283,143,357,143,357,326,312,325,307,216,268,325,227,325,186,212,184,325" shape="poly">
-              <area target="" alt="About" title="About" href="#/about" coords="250,51,280,55,315,67,344,81,366,101,390,121,408,151,424,181,430,211,431,233,361,236,359,141,279,136,250,217" shape="poly">
-              <area target="" alt="Academic" title="Academic" href="#/academic" coords="244,213,245,53,205,58,167,71,137,92,107,118,93,139,80,162,68,189,63,223,62,234,135,238,135,139,213,140" shape="poly">
-              <area target="" alt="Campus Life" title="Campus Life" href="#/campus" coords="134,241,61,240,64,280,76,308,92,339,113,363,140,389,163,401,194,415,220,422,246,424,246,332,220,335,190,236,191,331,135,331" shape="poly">
-              <area target="" alt="Social Management" title="Social Management" href="#/social" coords="251,422,248,332,273,325,306,230,307,327,361,328,363,242,435,242,426,290,411,328,385,362,358,389,321,409,286,420" shape="poly">
+              <area target="" alt="" title="Home" href="#/home" coords="138,323,138,143,213,143,246,237,283,143,357,143,357,326,312,325,307,216,268,325,227,325,186,212,184,325" shape="poly">
+              <area target="" alt="" title="About" href="#/about" coords="250,51,280,55,315,67,344,81,366,101,390,121,408,151,424,181,430,211,431,233,361,236,359,141,279,136,250,217" shape="poly">
+              <area target="" alt="" title="Academic" href="#/academic" coords="244,213,245,53,205,58,167,71,137,92,107,118,93,139,80,162,68,189,63,223,62,234,135,238,135,139,213,140" shape="poly">
+              <area target="" alt="" title="Campus Life" href="#/campus" coords="134,241,61,240,64,280,76,308,92,339,113,363,140,389,163,401,194,415,220,422,246,424,246,332,220,335,190,236,191,331,135,331" shape="poly">
+              <area target="" alt="" title="Social Management" href="#/social" coords="251,422,248,332,273,325,306,230,307,327,361,328,363,242,435,242,426,290,411,328,385,362,358,389,321,409,286,420" shape="poly">
           </map>
         </div>
 
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="nav-link" class="active" href="#/">Home</a></li>
+            <li class="dropdown">
+              <a id="nav-link" href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Senior High School</a></li>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Parents</a></li>
+                <li><a href="#">Alumni</a></li>
+                <!-- <li role="separator" class="divider"></li> -->
+                <li><a href="#">Faculty & Staff</a></li>
+              </ul>
+            </li>
+            <li><a id="nav-link" href="#/">Home</a></li>
             <li><a id="nav-link" ng-href="#/about">About</a></li>
             <li><a id="nav-link" ng-href="#/academic">Academic</a></li>
             <li><a id="nav-link" ng-href="#/campus">Campus Life</a></li>
@@ -109,24 +120,30 @@
       </a>
     </div>
 
-    <div class="container-narrow">
-    <div ng-view=""></div>
-    </div>
+    <!-- Start Sidebar -->
+    <!-- End Sidebar -->
 
-    <div class="footer">
+    <div class="row">
       <div class="container-narrow">
-        <div class="text-center center-block">
-          <h4>CONNECT WITH US</h4>
-          <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-          <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-          <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-          <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+        <div ng-view=""></div>
+      </div>
+    </div>    
+
+    <div class="row">
+      <div class="footer">
+        <div class="container-narrow">
+          <div class="text-center center-block">
+            <h4>CONNECT WITH US</h4>
+            <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+            <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+            <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+            <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+          </div>
+          <hr>
+          <p class="text-center"><span class="fa fa-copyright"></span> <em>2016 MIDWAY IT DEPARTMENT ALL RIGHTS RESERVED</em></p>
         </div>
-        <hr>
-        <p class="text-center"><span class="fa fa-copyright"></span> <em>2016 MIDWAY IT DEPARTMENT ALL RIGHTS RESERVED</em></p>
       </div>
     </div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -166,7 +183,7 @@
           $('map').imageMapResize();
       });
 
-      $( document ).tooltip();
+      // $( document ).tooltip();
     </script>
 </body>
 </html>
